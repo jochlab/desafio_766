@@ -5,3 +5,31 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+
+/* Estilo personalizado para el botón "Ver más" */
+.vermas {
+    background-color: #FF5733;
+    /* Cambia el color de fondo */
+    border-color: #FF5733;
+    /* Cambia el color del borde */
+    color: white;
+    /* Cambia el color del texto */
+}
+
+/* Cambiar estilo cuando se coloca el cursor sobre el botón Ver más */
+.vermas:hover {
+    background-color: #E63A00;
+    /* Cambia el color de fondo al pasar el cursor */
+    border-color: #E63A00;
+    /* Cambia el color del borde al pasar el cursor */
+    color: white;
+    /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Estilos para elementos con la clase logo-image */
+.logo-image {
+    width: 150px;
+    /* Ancho */
+    height: 50px;
+    /* Altura */
+}
