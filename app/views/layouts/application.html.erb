@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Josech">
+    <meta name="copyright" content="2023 Copyright of Joch">
+    <meta name="description" content="Sitio web oficial of Portfolio Josech">
+    <meta name="keywords" content="development,full stack, josech dev,ruby, ror, rails">
+
+    <!-- Meta tags para Facebook -->
+
+    <meta property="og:title" content="Portfolio Josech">
+    <meta property="og:description" content="Sitio web oficial of Portfolio Josech">
+    <meta property="og:url" content="https://www.myporfoliojosech.com">
+
+    <!-- Meta tags para Twitter -->
+
+    <meta name="twitter:title" content="Portfolio Josech">
+    <meta name="twitter:description" content="Sitio web oficial of Portfolio Josech">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Meta tags para LinkedIn -->
+
+    <meta property="og:title" content="Portfolio Josech">
+    <meta property="og:description" content="Sitio web oficial of Portfolio Josech">
+    <meta property="og:url" content="https://www.myporfoliojosech.com">
+    <meta property="og:type" content="website">
+
+    <!--Favicon-->
+
+    <%= favicon_link_tag "favicon.ico" %>
+
+    <%= stylesheet_link_tag "application", 'mystyles', "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+  <nav id="menutop" class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container">
+  <%= link_to home_path, class: "navbar-brand" do %>
+    <%= image_tag "logo.png", alt: "Logo de Mi Portafolio Joch", class: "logo-image" %>
+  <% end %>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              
+              <li class="nav-item">
+              <%= link_to "Home", home_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+              <%= link_to "Projects", projects_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+              <%= link_to "Contact", contact_path, class: "nav-link" %>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+    <%= yield %>
+  </body>
+</html>

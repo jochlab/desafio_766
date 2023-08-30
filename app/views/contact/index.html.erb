@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Contáctenos</h1>
+  <p>Complete el siguiente Formulario para atender su Consulta</p>
+  <%= form_tag("/contact") do %>
+    <div class="form-group">
+      <%= label_tag("Nombre:") %>
+      <%= text_field_tag("name", nil, class: "form-control") %>
+    </div>
+    <div class="form-group">
+      <%= label_tag("Email:") %>
+      <%= email_field_tag("email", nil, class: "form-control") %>
+    </div>
+    <div class="form-group">
+      <%= label_tag("Mensaje:") %>
+      <%= text_area_tag("message", nil, class: "form-control") %>
+    </div>
+    <%= submit_tag("Enviar", class: "btn btn-primary") %>
+  <% end %>
+</div>
